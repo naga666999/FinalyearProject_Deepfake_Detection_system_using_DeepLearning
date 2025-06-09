@@ -1,0 +1,70 @@
+{% extends 'home.html' %}
+
+{% block navabar %}
+    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+        <li class="nav-item">
+            <a class="nav-link click-scroll" href="{{url_for('home')}}">Home</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link click-scroll active" href="{{url_for('video_pred')}}">Video</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link click-scroll active" style="color: black;" href="{{url_for('image_pred')}}">Image</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link click-scroll active" href="{{url_for('index')}}">LogOut</a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+
+    <section class="contact-section section-padding" id="section_6">
+        <center>
+            {% if path %}
+                <div>
+                    <h4>Prediction: {{prediction}}</h4>
+                    <img src="/{{path}}" style="height: 200px; width: 200px;">
+                </div>
+            {% endif %}
+        </center>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 mx-auto">
+
+                    <nav class="d-flex justify-content-center">
+                        <div class="nav nav-tabs align-items-baseline justify-content-center" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-ContactForm-tab" data-bs-toggle="tab" data-bs-target="#nav-ContactForm" type="button" role="tab" aria-controls="nav-ContactForm" aria-selected="false">
+                                <h5>Upload Image</h5>
+                            </button>
+                        </div>
+                    </nav>
+
+                    <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-ContactForm" role="tabpanel" aria-labelledby="nav-ContactForm-tab">
+                            <form class="custom-form contact-form mb-5 mb-lg-0" action="{{url_for('image_pred')}}" method="post" role="form" enctype="multipart/form-data">
+                                <div class="contact-form-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input style="width: 400px; margin-left: 120px;" type="file" name="file" accept="image/*" class="btn btn-primary" required>
+                                        </div>
+                                    </div><br>
+
+                                    <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                                        <button type="submit" class="form-control">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

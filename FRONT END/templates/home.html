@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Fake Video Detection</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+                
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="/static/css/templatemo-festava-live.css" rel="stylesheet">
+        
+<!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+    </head>
+    
+    <body>
+
+        <main>
+
+            <header class="site-header">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-lg-12 col-12 d-flex flex-wrap">
+                            <p class="d-flex me-4 mb-0">
+                                <br> 
+                                <strong class="text-dark"></strong>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="home.html">
+                        Fake Video Detection
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        {% block navabar %}
+                            <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" style="color: yellow;" href="{{url_for('home')}}">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll active" href="{{url_for('video_pred')}}">Video</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll active" href="{{url_for('image_pred')}}">Image</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll active" href="{{url_for('index')}}">LogOut</a>
+                                </li>
+                            </ul>
+                        {% endblock %}
+                    </div>
+                </div>
+            </nav>
+
+
+            {% block content %}
+                <section class="hero-section" id="section_1">
+                    <div class="section-overlay"></div>
+
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <div class="row">
+
+                            <div>
+                                <center>
+
+                                    <h1 style="margin-top: 0px;" class="text-white mb-5">About!</h1>
+
+                                    <p><strong>Deep video fake applications represent a groundbreaking advancement in artificial intelligence, enabling the synthesis of hyper-realistic video content that can be indistinguishable from authentic footage. Leveraging deep learning techniques such as generative adversarial networks (GANs) and convolutional neural networks (CNNs), these applications have the capability to manipulate facial expressions, gestures, and speech in videos with astonishing accuracy. By seamlessly blending and morphing source content with target video sequences, deep video fake technology has significant implications for various domains, including entertainment, journalism, and cybersecurity. However, the proliferation of deep video fakes also raises ethical concerns regarding misinformation, privacy violations, and potential misuse. This abstract explores the underlying principles, applications, and ethical considerations surrounding deep video fake technology, shedding light on its transformative potential and the challenges it presents in today's digital landscape.</strong></p>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-wrap">
+                        <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                            <source src="/static/video/background.mp4" type="video/mp4">
+
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </section>
+
+            {% endblock %}
+        </main>
+
+        {% if message %}
+            <script>
+                alert("{{ message }}")        
+            </script>
+        {% endif %}
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/jquery.sticky.js"></script>
+        <script src="/static/js/click-scroll.js"></script>
+        <script src="/static/js/custom.js"></script>
+
+    </body>
+</html>

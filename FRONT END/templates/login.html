@@ -1,0 +1,80 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <section class="contact-section section-padding" id="section_6">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 mx-auto">
+
+                    <nav class="d-flex justify-content-center">
+                        <div class="nav nav-tabs align-items-baseline justify-content-center" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-ContactForm-tab" data-bs-toggle="tab" data-bs-target="#nav-ContactForm" type="button" role="tab" aria-controls="nav-ContactForm" aria-selected="false">
+                                <h5>LogIn</h5>
+                            </button>
+
+                            <button class="nav-link" id="nav-ContactMap-tab" data-bs-toggle="tab" data-bs-target="#nav-ContactMap" type="button" role="tab" aria-controls="nav-ContactMap" aria-selected="false">
+                                <h5>Registration</h5>
+                            </button>
+                        </div>
+                    </nav>
+
+                    <div class="tab-content shadow-lg mt-5" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-ContactForm" role="tabpanel" aria-labelledby="nav-ContactForm-tab">
+                            <form class="custom-form contact-form mb-5 mb-lg-0" action="{{url_for('login')}}" method="post" role="form">
+                                <div class="contact-form-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input style="width: 500px; margin-left: 70px;" type="email" name="email" id="contact-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input style="width: 500px; margin-left: 70px;" type="password" name="password" class="form-control" placeholder="Password" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                                        <button type="submit" class="form-control">Login</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-ContactMap" role="tabpanel" aria-labelledby="nav-ContactMap-tab">
+                            <form class="custom-form contact-form mb-5 mb-lg-0" action="{{url_for('register')}}" method="post" role="form">
+                                <div class="contact-form-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input style="width: 500px; margin-left: 70px;" type="email" name="email" id="contact-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input style="width: 500px; margin-left: 70px;" type="password" name="password" class="form-control" placeholder="Password" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-12">
+                                            <input style="width: 500px; margin-left: 70px;" type="password" name="c_password" class="form-control" placeholder="Conform Password" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                                        <button type="submit" class="form-control">Register</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
