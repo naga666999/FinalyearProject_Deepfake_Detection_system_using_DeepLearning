@@ -118,9 +118,6 @@ python code/predict.py --file path/to/image_or_video
 
 
 
-
----
-
 ---
 
 📃 License
