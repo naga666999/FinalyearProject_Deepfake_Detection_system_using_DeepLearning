@@ -123,8 +123,13 @@ python code/predict.py --file path/to/image_or_video
 
 📊 Sample Output
 
-![Fake Video Detection - Google Chrome 04-06-2025 5 12 45 PM](https://github.com/user-attachments/assets/83d8b7c5-bc8d-44d4-981b-74c57c73438c)
 
+![Fake Video Detection - Google Chrome 04-06-2025 5 12 45 PM](https://github.com/user-attachments/assets/e28ee528-b134-4a3f-a6f3-4c80b2bdbd3d)
+![Fake Video Detection - Google Chrome 04-06-2025 5 11 55 PM](https://github.com/user-attachments/assets/9ce1eec2-8203-47eb-8f60-7e39f0a30556)
+![Fake Video Detection - Google Chrome 04-06-2025 5 10 36 PM](https://github.com/user-attachments/assets/f400a23e-bd55-446c-b73c-88d894535b95)
+![Fake Video Detection - Google Chrome 04-06-2025 5 10 27 PM](https://github.com/user-attachments/assets/e782a200-652a-4cef-be92-1d99f48f95f3)
+![Fake Video Detection - Google Chrome 04-06-2025 5 10 14 PM](https://github.com/user-attachments/assets/f1ccb629-5355-4e7b-bba5-462d692056e9)
+![Fake Video Detection - Google Chrome 04-06-2025 5 09 53 PM](https://github.com/user-attachments/assets/f726331b-0082-4e2e-97ea-29c8eca7fe0a)
 
 
 
